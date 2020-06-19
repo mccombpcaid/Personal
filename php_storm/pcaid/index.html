@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>McComb Pc Aid</title>
+    <!-- Get Jquery from google cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Get Jquery UI and its style sheet from google cdn -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+<header>
+    <img src="images/pc_aid_logo.png" class="logo" />
+    <section class="slide_show">
+        <img src="images/pexels-photo-2312369.jpeg"  class="slide_image1" id="first_slide" />
+        <img src="images/pexels-photo-459654.jpeg"  class="slide_image2" />
+        <img src="images/most-destructive-computer-viruses-ever.png" class="slide_image3" />
+        <img src="images/macbook-apple-imac-computer-39284.jpeg" class="slide_image4" />
+        <img src="images/computer-virus-hazard.jpg" class="slide_image5" />
+        <img src="images/slide_image1.png" class="slide_image6" alt="Image"/>
+        <img src="images/pc_aid_logo.png" class="slide_image3" alt="Image"/>
+    </section>
+
+    <section class="slide_show">
+
+    </section>
+</header>
+<script>
+    //$(document).ready(function() {
+
+        var next_slide;
+        var timer;
+//slide_out
+        function slide_out(){
+            $(next_slide).animate({
+                    left: '-89.5%'
+                },
+                1550, // <----Controls speed of slide going out
+                function(){ $(this).removeAttr('style');}
+                /*            /|\
+                 *             |
+                 *Above function resets the slide back to original
+                 *location and style
+                 * */
+            );  //end animate
+        } //end slide_out
+//slide_in
+        function slide_in() {
+            $(next_slide).animate({
+                    left: $(window).width() / 2 - $(next_slide).width() / 2
+                },  //Above centers the slide within the window
+                1475 // <----controls the speed of incoming slide
+            );  // end animate
+        } //end slide_in
+//my_timer
+        function my_timer() {
+            slide_out();
+            /*Check to see if we are at the end of the slide's images and
+                 *if so then we need to start back at the beginning which will
+                 *be the first child hence.....
+                 */
+            if (next_slide.next().length === 0) {
+
+                next_slide = $(".slide_show img:first-child");
+            } else {  //If not at the beginning then I need the next slide
+                next_slide = next_slide.next();
+            }
+
+            slide_in();
+        }
+//start_slide_show
+        function start_slide_show(){
+            /*The next three lines sets up the slide show from the beginning
+             *of the slides. Selects and sets the first slide. Move the first
+             *slide into the center of the browser window. Then set the timer
+             * for the code that will continue to loop moving each slide in and
+             * out.
+             * */
+            next_slide = $(".slide_show img:first-child");
+            slide_in();
+            timer = setInterval(my_timer, 8000);// <--- control the speed slide is seen
+        }
+        start_slide_show();
+
+    //}); // end ready for the jQuery
+    //script
+</script> <!-- end the slide show script -->
+</body>
+</html>

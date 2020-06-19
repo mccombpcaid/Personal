@@ -1,0 +1,15 @@
+.wrapper{
+    display:block !important;
+    width:90%!important;
+    height:100% !important;
+    margin:10px auto!important;
+    border:10px solid black !important;
+}
+.page
+{
+    border:5px solid black;
+    width:500px!important;
+    height:500px;
+    margin:5px auto!important;
+    background-color:aqua;
+}

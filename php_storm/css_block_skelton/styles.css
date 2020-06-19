@@ -1,0 +1,24 @@
+.main{
+    margin: 0 auto;
+    width:80%;}
+.main:after{
+    display:block;
+    clear:both;
+    content:"";}
+.column{
+
+    min-height:600px;
+    margin-bottom:20px;
+    float:left;
+    display:block;}
+#left_column{
+    width:20%;
+    background-color:Blue;}
+#right_column{
+    width:80%;
+    background-color:red;}
+.header{
+    width:100%;
+    height:100px;
+    background-color:yellow;
+    clear:both;}

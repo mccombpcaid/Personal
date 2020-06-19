@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery for Dummies</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.fallingsnow.min.js"> </script>
+    <link href="cs/jquery.fallingsnow.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="cs/main.css">
+
+    <script>
+
+        $(document).ready(function(){
+            //alert("it fired");
+           $("#snow").fallingSnow();
+
+
+
+        });//end ready function
+        /*
+       var image, imageCache=[];
+       var name = "Billy Badon";
+       $("#slides img").each(function(){
+       image = new Image();
+       image.src = $(this).attr("src");
+       image.title = $(this).attr("alt");
+       imageCache.push( image );
+       })*/
+    </script>
+
+
+</head>
+
+
+<body id="main_page" >
+<section id="snow" class="page">
+
+
+    <<h1>Fishing Slide Show</h1>
+    <h2 id="caption">Casting on the Upper Kings</h2>
+    <img id="slide" scr="images/casting1.jpg" alt="">
+    <div id="slides">
+    <img src="images/casting1.jpg" alt="Casting on the Upper Kings">
+    <img src="images/casting2.jpg" alt="Casting on the Lower Kings">
+    <img src="images/catchrelease.jpg" alt="Catch and Release on the Big Horn">
+    <img src="images/fish.jpg" alt="Catching on the South Fork">
+    <img src="images/lures.jpg" alt="The Lures for Catching">
+
+        Hello world
+    </div>
+
+</section>
+</body>
+</html>

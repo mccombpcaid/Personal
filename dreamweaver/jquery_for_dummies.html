@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>jQuery for Dummies</title>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        var image, imageCache=[];
+        $("#slides img").each(fucntion(){
+           image=new Image();
+        image.src = $this.attr("src");
+        image.title = $(this).attr("alt");
+        imageCache.push(image);
+        });
+    
+    });//end ready function
+        
+    </script>
+</head>
+
+
+<body>
+
+    <section>
+        <h1>Fishing Slide Show</h1>
+        <h2 id="caption">Casting on the Upper Kings</h2>
+        <img id="slide" scr="images/casting1.jpg" alt=""></h2>
+        <div id="slides">
+        <img src="images/casting1.jpg" alt="Casting on the Upper Kings">
+        <img src="images/casting2.jpg" alt="Casting on the Lower Kings">
+        <img src="images/catchrelease.jpj" alt="Catch and Release on the Big Horn">
+        <img src="images/fish.jpg" alt="Catchin on the Sorth Fork">
+        <img src="images/lures.jpj" alt="The Lures for Catching">
+            
+    </div>
+    </section>
+</body>
+</html>

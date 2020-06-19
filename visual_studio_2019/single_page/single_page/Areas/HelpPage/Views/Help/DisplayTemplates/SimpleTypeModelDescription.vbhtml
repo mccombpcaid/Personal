@@ -1,0 +1,3 @@
+@Imports single_page.Areas.HelpPage.ModelDescriptions
+@ModelType SimpleTypeModelDescription
+@Model.Documentation

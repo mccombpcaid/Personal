@@ -1,0 +1,83 @@
+*{
+    font-family: Arial, Verdana, sans-serif;
+    color: #665544;
+    }
+#nav, #feature, .article, #footer,#header{
+    background-color: #efefef;
+    margin-top:0px;
+    padding: 0px 0px 0px 0px;}
+#feature, .article{
+    height:100px;}
+li{
+    display: inline;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: gray;
+    font-weight: bold;
+    color: black;
+}
+#header {
+    
+    width: 938px;
+    height: 60px;
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
+    border: 1px solid black;
+    font-size: 18px;
+}
+#page{
+	max-width: 950px;
+	margin:20px auto;}
+#feature{
+    border: 1px solid black;
+    width:938px;
+	background-image: url("images/header_1.jpg");
+	height:225px; }
+#logo{
+    margin:0px;
+    padding:0px;	
+}
+#nav{
+    margin: 0px;
+    padding:0px;
+}
+.article{
+    width:400px;
+    height:225px;
+    float:left;}
+#cell1{
+    
+    width:293px;
+    height:1100px;
+    padding:0px 10px 0px 10px;
+    margin:0px 0px 1px 10px;
+    border-right:1px solid black;
+    } 
+#cell2{
+    width:313px;
+    height:1000px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    border-right:1px solid black;
+    
+    } 
+#cell3{
+    width:313px;
+    height:1000px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    }  
+#thumb1{
+    display:block;
+    margin:8px 10px 0px 0px;
+    float: left;
+}
+#footer{
+    text-align: center;
+}
+
+
+
+#cheerfull {
+    float:right;
+}
